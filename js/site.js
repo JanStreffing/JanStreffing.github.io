@@ -48,6 +48,24 @@
   var ORCID = '0000-0001-9515-3322';
   var loaded = false;
 
+  // ORCID summaries carry no author lists; Crossref does, keyed by DOI.
+  function addAuthors(target, doi, year) {
+    fetch('https://api.crossref.org/works/' + encodeURIComponent(doi))
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (res) {
+        var names = ((res.message && res.message.author) || []).map(function (p) { return p.family || p.name || ''; }).filter(Boolean);
+        if (!names.length) return;
+        var shown = names.length > 6 ? names.slice(0, 5) : names;
+        var me = names.indexOf('Streffing');
+        var esc = function (t) { return t.replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
+        var parts = shown.map(function (n) { return n === 'Streffing' ? '<strong>Streffing</strong>' : esc(n); });
+        var text = parts.join(', ');
+        if (names.length > 6) text += ' et al.' + (me >= 5 ? ' incl. <strong>Streffing</strong>' : '');
+        target.innerHTML = text + ' (' + year + '). ';
+      })
+      .catch(function () { /* leave the title without authors */ });
+  }
+
   details.addEventListener('toggle', function () {
     if (!details.open || loaded) return;
     loaded = true;
@@ -79,10 +97,13 @@
           var d = document.createElement('div');
           var a = document.createElement(it.doi ? 'a' : 'span');
           if (it.doi) a.href = 'https://doi.org/' + it.doi;
-          a.textContent = it.title;
+          var authors = document.createElement('span'); authors.className = 'authors';
+          a.appendChild(authors);
+          a.appendChild(document.createTextNode(it.title));
           d.appendChild(a);
           if (it.journal) { var v = document.createElement('span'); v.className = 'venue'; v.textContent = it.journal; d.appendChild(v); }
           li.appendChild(y); li.appendChild(d); list.appendChild(li);
+          if (it.doi) addAuthors(authors, it.doi, it.year);
         });
         status.hidden = true; list.hidden = false;
       })
