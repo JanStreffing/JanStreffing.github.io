@@ -1,0 +1,5 @@
+# Original photos; only the cropped portraits are published
+images/IMG-*.jpg
+images/IMG-*.jpeg
+images/2026*.jpg
+.DS_Store

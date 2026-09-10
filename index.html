@@ -1,195 +1,223 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Jan Streffing</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jan Streffing</title>
+  <meta name="description" content="Jan Streffing, Earth system model developer at the Alfred Wegener Institute. Lead developer of AWI-CM3 and AWI-ESM3.">
+  <meta property="og:title" content="Jan Streffing">
+  <meta property="og:description" content="Earth system model developer at the Alfred Wegener Institute. Lead developer of AWI-CM3 and AWI-ESM3.">
+  <meta property="og:image" content="https://janstreffing.github.io/images/portrait-800.jpg">
+  <meta property="og:type" content="profile">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-		<!-- Header -->
-			<div id="header">
+<a class="skip" href="#main">Skip to content</a>
 
-				<div class="top">
+<aside class="sidebar">
+  <div class="sidebar-top">
+    <img class="portrait" src="images/portrait.jpg" width="88" height="88" alt="Jan Streffing">
+    <div class="sidebar-name">Jan Streffing</div>
+    <div class="sidebar-role"><span>Earth System Model Developer</span><br><span>Scientific Programmer, AWI</span></div>
+  </div>
+  <nav class="nav" aria-label="Sections">
+    <a href="#models"><span class="num">01</span>Models</a>
+    <a href="#projects"><span class="num">02</span>Projects</a>
+    <a href="#publications"><span class="num">03</span>Publications</a>
+    <a href="#software"><span class="num">04</span>Software</a>
+    <a href="#cv"><span class="num">05</span>CV &amp; Contact</a>
+  </nav>
+  <div class="sidebar-links">
+    <a href="https://github.com/JanStreffing" title="GitHub" aria-label="GitHub">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+    </a>
+    <a href="https://orcid.org/0000-0001-9515-3322" title="ORCID" aria-label="ORCID">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 8v8M14 8h1.5a4 4 0 0 1 0 8H14z"/></svg>
+    </a>
+    <a href="mailto:jan.streffing@awi.de" title="Email" aria-label="Email">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+    </a>
+  </div>
+</aside>
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Jan Streffing</h1>
-							<p>Scientific Programmer</p>
-						</div>
+<main id="main">
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#publications" id="publications-link"><span class="icon solid fa-th">Publications</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="eyebrow">Alfred Wegener Institute · Bremerhaven</div>
+        <h1>I build AWI's coupled climate and Earth system models.</h1>
+        <p>Aerospace engineer by training. Joined AWI in 2017 to couple OpenIFS to FESOM2, which became AWI-CM3. Now lead its successor AWI-ESM3, working across the Paleoclimate Dynamics and Climate Dynamics sections. PI in CAP7 and LiquidIce; advisor to EERIE and Destination Earth.</p>
+        <ul class="chips" aria-label="Model components">
+          <li>OpenIFS</li><li>FESOM2</li><li>OASIS3-MCT</li><li>LPJ-GUESS</li><li>PISM</li><li>XIOS</li>
+        </ul>
+      </div>
+      <figure class="hero-figure">
+        <img src="images/awi-esm3-components.svg" width="750" height="615" alt="AWI-ESM3 component coupling diagram: FESOM 2.7 with FESIM and REcoM, OpenIFS 48 with WAM and H-TESSEL, LPJ-GUESS, XIOS, runoff mapper, PISM via SCOPE">
+        <figcaption>AWI-ESM3 components and couplers.</figcaption>
+      </figure>
+    </div>
 
-				</div>
+    <div class="timeline">
+      <div class="timeline-head">
+        <span class="eyebrow">Simulated climates · one code base, five epochs</span>
+        <span class="mono small">status as of September 2026</span>
+      </div>
+      <div class="timeline-bar" aria-hidden="true"></div>
+      <ol class="epochs">
+        <li><span class="epoch-t">127 ka</span><span class="epoch-n">Last Interglacial</span><span class="epoch-m">EC-Earth · <a href="https://epic.awi.de/id/eprint/45565/">M.Sc. thesis 2017</a></span><span class="tag done">done</span></li>
+        <li><span class="epoch-t">21 ka</span><span class="epoch-n">Last Glacial Maximum</span><span class="epoch-m">AWI-ESM3 with interactive ice sheets</span><span class="tag planned">planned</span></li>
+        <li><span class="epoch-t">6 ka</span><span class="epoch-n">Mid-Holocene</span><span class="epoch-m">EC-Earth · <a href="https://epic.awi.de/id/eprint/45565/">M.Sc. thesis 2017</a></span><span class="tag done">done</span></li>
+        <li><span class="epoch-t">1850 – 2025</span><span class="epoch-n">CMIP7 historical, transient aerosols</span><span class="epoch-m">AWI-ESM3 · CAP7</span><span class="tag running">running</span></li>
+        <li><span class="epoch-t">2100</span><span class="epoch-n">Storm-resolving projection, 9 km</span><span class="epoch-m">AWI-CM3 · <a href="https://doi.org/10.5194/esd-16-1103-2025">Moon et al. 2025</a></span><span class="tag done">done</span></li>
+      </ol>
+    </div>
+  </section>
 
-				<div class="bottom">
+  <section class="strip" aria-label="What I do">
+    <div>AWI-ESM3 development and coupling</div>
+    <div>FESOM2 maintenance</div>
+    <div>Performance and scalability on HPC</div>
+    <div>CMORisation and CMIP7 data delivery</div>
+    <div>User support for the AWI model family</div>
+    <div>PI on CAP7 and LiquidIce</div>
+  </section>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
+  <section id="models" class="section">
+    <h2><span class="eyebrow">01</span>Models</h2>
+    <div class="cards two">
+      <article class="card">
+        <div class="eyebrow">2019 → today</div>
+        <h3>AWI-CM3</h3>
+        <p>OpenIFS 43r3 atmosphere coupled to the multi-resolution FESOM2 ocean and sea ice through OASIS3-MCT. Runs from 61 km / 25–125 km CMIP-class setups up to 9 km storm-resolving projections. Described in Streffing et al. 2022.</p>
+        <p class="links"><a href="https://awi-cm3-documentation.readthedocs.io/">Documentation</a><a href="https://doi.org/10.5194/gmd-15-6399-2022">Description paper</a><a href="https://github.com/AWI-ESM">Source</a></p>
+      </article>
+      <article class="card">
+        <div class="eyebrow">2024 → CMIP7</div>
+        <h3>AWI-ESM3</h3>
+        <p>AWI-CM3 extended to an Earth system model: OpenIFS 48r1, FESOM 2.7 with REcoM biogeochemistry, LPJ-GUESS dynamic vegetation and the PISM ice sheet via SCOPE. Running the CMIP7 historical now; designed so that the same executable can later carry glacial climates.</p>
+        <p class="links"><a href="https://awi-cm3-documentation.readthedocs.io/">Documentation</a><a href="https://doi.org/10.5194/egusphere-egu26-17934">CMIP7 status</a><a href="https://github.com/AWI-ESM">Source</a></p>
+      </article>
+    </div>
+  </section>
 
-				</div>
+  <section id="projects" class="section">
+    <h2><span class="eyebrow">02</span>Projects</h2>
+    <div class="table">
+      <div class="row">
+        <span class="mono role pi">PI</span>
+        <strong><a href="https://www.dwd.de/EN/research/projects/cap7/cap7.html">CAP7</a></strong>
+        <span>German contribution to CMIP7 AR7 Fast Track. AWI-CM3 and AWI-ESM3 DECK and ScenarioMIP runs, transient aerosol forcing, CMOR output.</span>
+        <span class="mono meta">BMFTR · 2025 –</span>
+      </div>
+      <div class="row">
+        <span class="mono role pi">PI</span>
+        <strong><a href="https://liquidice.eu/">LiquidIce</a></strong>
+        <span>Inland ice, snow and permafrost in a changing climate. Improving how AWI-ESM3 represents ice–liquid exchanges for Greenland, Svalbard, the Alps and High Mountain Asia.</span>
+        <span class="mono meta">Horizon Europe · 2024 – 2028</span>
+      </div>
+      <div class="row">
+        <span class="mono role">Advisor</span>
+        <strong><a href="https://eerie-project.eu/">EERIE</a></strong>
+        <span>European eddy-rich Earth system models.</span>
+        <span class="mono meta">Horizon Europe</span>
+      </div>
+      <div class="row">
+        <span class="mono role">Advisor</span>
+        <strong><a href="https://destination-earth.eu/">Destination Earth</a></strong>
+        <span>Climate Change Adaptation Digital Twin, km-scale IFS-FESOM.</span>
+        <span class="mono meta">EU / ECMWF</span>
+      </div>
+      <div class="row">
+        <span class="mono role">PhD</span>
+        <strong><a href="https://www.trr-energytransfers.de/">TRR 181</a></strong>
+        <span>Energy transfers in atmosphere and ocean. Subproject L4: energy-consistent ocean–atmosphere coupling.</span>
+        <span class="mono meta">DFG · 2021 – 2023</span>
+      </div>
+    </div>
+  </section>
 
-			</div>
+  <section id="publications" class="section">
+    <h2><span class="eyebrow">03</span>Publications <a class="mono small h2-link" href="https://orcid.org/0000-0001-9515-3322">Full list on ORCID →</a></h2>
 
-		<!-- Main -->
-			<div id="main">
+    <div class="eyebrow sub">First author</div>
+    <ol class="pubs">
+      <li class="pub card">
+        <span class="mono year hl">2022</span>
+        <div><a href="https://doi.org/10.5194/gmd-15-6399-2022"><strong>Streffing</strong>, Sidorenko, Semmler, Zampieri, Scholz, Andrés-Martínez, Koldunov, Rackow, Kjellsson, Goessling, Athanase, Wang, Hegewald, Sein, Mogensen, Hohenegger, Jung (2022). AWI-CM3 coupled climate model: description and evaluation experiments for a prototype post-CMIP6 model.</a><span class="venue">Geosci. Model Dev. 15, 6399–6427</span></div>
+      </li>
+      <li class="pub card">
+        <span class="mono year hl">2021</span>
+        <div><a href="https://doi.org/10.1175/JCLI-D-19-1005.1"><strong>Streffing</strong>, Semmler, Zampieri, Jung (2021). Response of Northern Hemisphere weather and climate to Arctic sea ice decline: resolution independence in PAMIP simulations.</a><span class="venue">J. Climate 34, 8445–8457</span></div>
+      </li>
+    </ol>
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+    <div class="eyebrow sub">Selected co-authored</div>
+    <ol class="pubs plain">
+      <li class="pub">
+        <span class="mono year">2025</span>
+        <div><a href="https://doi.org/10.5194/esd-16-1103-2025">Moon, Streffing, Hegewald, Rackow et al. (2025). Earth's future climate and its variability simulated at 9 km global resolution.</a><span class="venue">Earth Syst. Dynam. 16, 1103</span></div>
+      </li>
+      <li class="pub">
+        <span class="mono year">2026</span>
+        <div><a href="https://doi.org/10.5194/gmd-19-3395-2026">Zapponini, Semmler, Streffing, Rackow, Roach, Jung (2026). Assessing resolution sensitivity in coupled climate simulations with AWI-CM3.</a><span class="venue">Geosci. Model Dev. 19, 3395–3425</span></div>
+      </li>
+      <li class="pub">
+        <span class="mono year">2026</span>
+        <div><a href="https://arxiv.org/search/?query=FESOM2-JAX&searchtype=all">Beyer, Scholz, Kuznetsov, Streffing et al. (2026). FESOM2-JAX v1.0: a differentiable shadow of the ocean–sea-ice model FESOM2, cast onto GPUs.</a><span class="venue">arXiv preprint</span></div>
+      </li>
+    </ol>
 
-							<header>
-								<h2 class="alt">Jan Streffing</h2>
-								<p>Scientific Programmer</p>
-							</header>
+    <details class="orcid" id="orcid-all">
+      <summary class="mono small">All journal articles, from ORCID</summary>
+      <p class="mono small status">Loading…</p>
+      <ol class="pubs plain" hidden></ol>
+    </details>
+  </section>
 
-							<footer>
-								<a href="#publications" class="button scrolly">Magna Aliquam</a>
-							</footer>
+  <section id="software" class="section">
+    <h2><span class="eyebrow">04</span>Software</h2>
+    <div class="cards three">
+      <a class="card sw" href="https://github.com/JanStreffing/ocp-tool"><span class="mono name">ocp-tool</span><span>Generates OASIS3-MCT input files and adapts OpenIFS land–sea masks to ocean meshes.</span></a>
+      <a class="card sw" href="https://github.com/FESOM/fesom2"><span class="mono name">fesom2</span><span>Multi-resolution ocean and sea-ice model. Maintainer.</span></a>
+      <a class="card sw" href="https://github.com/esm-tools/esm_tools"><span class="mono name">esm_tools</span><span>Modular infrastructure for building and running Earth system simulations.</span></a>
+      <a class="card sw" href="https://github.com/JanStreffing/cmpitool"><span class="mono name">cmpitool</span><span>Lightweight climate model performance index: how well does a model reproduce recent decades? On conda-forge.</span></a>
+      <a class="card sw" href="https://github.com/AWI-ESM/documentation"><span class="mono name">AWI-ESM/documentation</span><span>How to build, run and evaluate AWI-CM3 and AWI-ESM3.</span></a>
+      <a class="card sw" href="https://github.com/JanStreffing/lint-xios-xml"><span class="mono name">lint-xios-xml</span><span>Linter for XIOS XML configurations: structure, attributes, references.</span></a>
+    </div>
+  </section>
 
-						</div>
-					</section>
+  <section id="cv" class="section cv">
+    <div>
+      <h2><span class="eyebrow">05</span>CV &amp; Contact</h2>
+      <p>PhD thesis: <em>Modelling the atmosphere–ocean interface with improved energetic consistency</em>. Constructor University Bremen, TRR 181, defended 22 August 2023.<br>
+      M.Sc. thesis: <em><a href="https://epic.awi.de/id/eprint/45565/">High resolution simulations for present and past climate states with the Earth system model EC-Earth</a></em>. TU Braunschweig / AWI, 2017.</p>
+      <p class="contact">
+        <a href="mailto:jan.streffing@awi.de">jan.streffing@awi.de</a><br>
+        <span class="muted">Alfred Wegener Institute, Klußmannstraße 3, 27570 Bremerhaven, Germany</span><br>
+        <span class="muted"><a href="https://orcid.org/0000-0001-9515-3322">ORCID</a> · <a href="https://epic.awi.de/view/creators/Streffing=3AJan=3A=3A.html">EPIC</a> · <a href="https://github.com/JanStreffing">GitHub</a> · <a href="https://www.awi.de/en/about-us/organisation/staff/single-view/jan-streffing.html">AWI</a></span>
+      </p>
+    </div>
+    <ol class="cv-list">
+      <li><span class="mono">2023 –</span><span>Scientific Programmer (permanent), AWI</span></li>
+      <li><span class="mono">2021 – 2023</span><span>PhD Applied Mathematics, Constructor University Bremen · TRR 181</span></li>
+      <li><span class="mono">2017 – 2020</span><span>Scientific Programmer, AWI Climate Dynamics</span></li>
+      <li><span class="mono">2014 – 2017</span><span>M.Sc. Aerospace Engineering, TU Braunschweig</span></li>
+      <li><span class="mono">2009 – 2014</span><span>B.Sc. Mechanical Engineering, TU Braunschweig</span></li>
+    </ol>
+  </section>
 
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
+  <footer class="footer mono small">
+    © Jan Streffing · Diagram from <a href="https://github.com/JanStreffing/awi-esm3-components-graphic">awi-esm3-components-graphic</a>
+  </footer>
 
-							<header>
-								<h2>About Me</h2>
-							</header>
+</main>
 
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-							<p>Aerospace engineer by training, scietific programmer by profession, Earth System Model developer
-							by passion. Currently persueing PhD in Applied Mathematics at Constructor University Bremen. 
-							Guest at Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research.
-							Location: Bremerhaven, Germany</p>
-
-						</div>
-					</section>
-
-				<!-- Publications -->
-					<section id="publications" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Publications</h2>
-							</header>
-
-							<p>TODO</p>
-
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>You can reach me on github or via email (Jan.Streffing@awi.de)</p>
-
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<script src="js/site.js" defer></script>
+</body>
 </html>
