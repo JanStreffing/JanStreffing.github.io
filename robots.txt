@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://janstreffing.github.io/sitemap.xml

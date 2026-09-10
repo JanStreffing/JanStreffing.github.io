@@ -15,6 +15,33 @@
     targets.forEach(function (t) { io.observe(t); });
   }
 
+  // --- Stars and last push on the software cards, from the GitHub API ---
+  // Unauthenticated: 60 requests per hour per IP, six cards, fails quietly.
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card.sw[href*="github.com/"]'));
+  function ago(iso) {
+    var days = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
+    if (days < 1) return 'today';
+    if (days === 1) return 'yesterday';
+    if (days < 30) return days + ' days ago';
+    var months = Math.floor(days / 30);
+    if (months < 12) return months + (months === 1 ? ' month ago' : ' months ago');
+    var years = Math.floor(days / 365);
+    return years + (years === 1 ? ' year ago' : ' years ago');
+  }
+  cards.forEach(function (card) {
+    var m = card.getAttribute('href').match(/github\.com\/([^\/]+\/[^\/]+)/);
+    if (!m) return;
+    fetch('https://api.github.com/repos/' + m[1])
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (repo) {
+        var line = document.createElement('span');
+        line.className = 'mono small repo-meta';
+        line.textContent = '★ ' + repo.stargazers_count + ' · updated ' + ago(repo.pushed_at);
+        card.appendChild(line);
+      })
+      .catch(function () { /* rate-limited or offline: leave the card as it is */ });
+  });
+
   // --- Full journal-article list from the ORCID public API, on demand ---
   var details = document.getElementById('orcid-all');
   if (!details) return;
