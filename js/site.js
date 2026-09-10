@@ -28,10 +28,13 @@
     var years = Math.floor(days / 365);
     return years + (years === 1 ? ' year ago' : ' years ago');
   }
-  function showFacts(card, stars, pushedAt) {
+  function showFacts(card, stars, pushedAt, commits) {
     var line = document.createElement('span');
     line.className = 'mono small repo-meta';
-    line.textContent = '\u2605 ' + stars + ' \u00b7 updated ' + ago(pushedAt);
+    var text = '\u2605 ' + stars;
+    if (commits > 0) text += ' \u00b7 ' + commits + ' commits by me';
+    text += ' \u00b7 updated ' + ago(pushedAt);
+    line.textContent = text;
     card.appendChild(line);
   }
   function fromApi(card, repo) {
@@ -47,7 +50,7 @@
         var m = card.getAttribute('href').match(/github\.com\/([^\/]+\/[^\/]+)/);
         if (!m) return;
         var f = facts[m[1]];
-        if (f && typeof f.stars === 'number' && f.pushed_at) showFacts(card, f.stars, f.pushed_at);
+        if (f && typeof f.stars === 'number' && f.pushed_at) showFacts(card, f.stars, f.pushed_at, f.commits || 0);
         else fromApi(card, m[1]);
       });
     });

@@ -22,12 +22,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p data
-          repos=$(grep -o 'href="https://github.com/[^"/]*/[^"/]*"' index.html \
-                  | sed -E 's#href="https://github.com/([^"]+)"#\1#' | sort -u)
+          repos=$(grep -o 'class="card sw" href="https://github.com/[^"/]*/[^"/]*"' index.html \
+                  | sed -E 's#.*href="https://github.com/([^"]+)"#\1#' | sort -u)
           echo "{" > data/repos.json
           first=1
           for r in $repos; do
             json=$(gh api "repos/$r" --jq '{stars: .stargazers_count, pushed_at: .pushed_at}' 2>/dev/null) || continue
+            mine=$(gh api --paginate "repos/$r/contributors?per_page=100" --jq '[.[] | select(.login=="JanStreffing") | .contributions] | add // 0' 2>/dev/null | paste -sd+ - | bc)
+            json=$(printf '%s' "$json" | sed "s/}$/, \"commits\": ${mine:-0}}/")
             [ $first -eq 1 ] || echo "," >> data/repos.json
             first=0
             printf '  "%s": %s' "$r" "$json" >> data/repos.json
