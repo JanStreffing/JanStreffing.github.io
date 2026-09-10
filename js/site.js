@@ -28,19 +28,29 @@
     var years = Math.floor(days / 365);
     return years + (years === 1 ? ' year ago' : ' years ago');
   }
-  cards.forEach(function (card) {
-    var m = card.getAttribute('href').match(/github\.com\/([^\/]+\/[^\/]+)/);
-    if (!m) return;
-    fetch('https://api.github.com/repos/' + m[1])
+  function showFacts(card, stars, pushedAt) {
+    var line = document.createElement('span');
+    line.className = 'mono small repo-meta';
+    line.textContent = '\u2605 ' + stars + ' \u00b7 updated ' + ago(pushedAt);
+    card.appendChild(line);
+  }
+  function fromApi(card, repo) {
+    fetch('https://api.github.com/repos/' + repo)
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (repo) {
-        var line = document.createElement('span');
-        line.className = 'mono small repo-meta';
-        line.textContent = '★ ' + repo.stargazers_count + ' · updated ' + ago(repo.pushed_at);
-        card.appendChild(line);
-      })
+      .then(function (d) { showFacts(card, d.stargazers_count, d.pushed_at); })
       .catch(function () { /* rate-limited or offline: leave the card as it is */ });
-  });
+  }
+  // data/repos.json is refreshed daily by a GitHub Action; the live API is the fallback.
+  fetch('data/repos.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+    .then(function (facts) {
+      cards.forEach(function (card) {
+        var m = card.getAttribute('href').match(/github\.com\/([^\/]+\/[^\/]+)/);
+        if (!m) return;
+        var f = facts[m[1]];
+        if (f && typeof f.stars === 'number' && f.pushed_at) showFacts(card, f.stars, f.pushed_at);
+        else fromApi(card, m[1]);
+      });
+    });
 
   // --- Full journal-article list from the ORCID public API, on demand ---
   var details = document.getElementById('orcid-all');
