@@ -1,30 +1,9 @@
 {
-  "AWI-ESM/documentation": {
-    "pushed_at": "2026-08-03T08:27:00Z",
-    "stars": 2
-  },
-  "ecmwf-ifs/openifs": {
-    "pushed_at": "2026-08-25T12:59:35Z",
-    "stars": 171
-  },
-  "esm-tools/esm_tools": {
-    "pushed_at": "2026-09-10T09:41:37Z",
-    "stars": 30
-  },
-  "FESOM/fesom2": {
-    "pushed_at": "2026-09-10T17:15:11Z",
-    "stars": 69
-  },
-  "JanStreffing/cmpitool": {
-    "pushed_at": "2026-06-09T09:01:48Z",
-    "stars": 5
-  },
-  "JanStreffing/lint-xios-xml": {
-    "pushed_at": "2026-04-17T14:32:21Z",
-    "stars": 0
-  },
-  "JanStreffing/ocp-tool": {
-    "pushed_at": "2026-09-08T13:47:19Z",
-    "stars": 6
-  }
+  "AWI-ESM/documentation": {"pushed_at":"2026-08-03T08:27:00Z","stars":2},
+  "FESOM/fesom2": {"pushed_at":"2026-09-10T17:15:11Z","stars":69},
+  "JanStreffing/cmpitool": {"pushed_at":"2026-06-09T09:01:48Z","stars":5},
+  "JanStreffing/lint-xios-xml": {"pushed_at":"2026-04-17T14:32:21Z","stars":0},
+  "JanStreffing/ocp-tool": {"pushed_at":"2026-09-08T13:47:19Z","stars":6},
+  "ecmwf-ifs/openifs": {"pushed_at":"2026-08-25T12:59:35Z","stars":171},
+  "esm-tools/esm_tools": {"pushed_at":"2026-09-10T09:41:37Z","stars":30}
 }
