@@ -128,7 +128,7 @@ main { margin-left: var(--sidebar-w); min-width: 0; }
 .timeline { display: flex; flex-direction: column; gap: 12px; }
 .timeline-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; color: var(--ink-3); }
 .timeline-bar { height: 2px; background: linear-gradient(90deg, var(--ice-2) 0%, var(--ice) 45%, var(--amber) 100%); }
-.epochs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; }
+.epochs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; }
 .epochs li { display: flex; flex-direction: column; gap: 4px; }
 .epoch-t { font-family: var(--mono); font-size: 14px; }
 .epoch-n { font-size: 13px; color: var(--ink-2); }
