@@ -1,8 +1,8 @@
 {
   "AWI-ESM/documentation": {"pushed_at":"2026-08-03T08:27:00Z","stars":2, "commits": 185},
   "AWI-ESM/release_evaluation_tool2": {"pushed_at":"2026-08-10T09:01:05Z","stars":0, "commits": 96},
-  "FESOM/fesom2": {"pushed_at":"2026-09-15T15:20:04Z","stars":69, "commits": 1012},
+  "FESOM/fesom2": {"pushed_at":"2026-09-17T09:21:53Z","stars":69, "commits": 1014},
   "JanStreffing/cmpitool": {"pushed_at":"2026-06-09T09:01:48Z","stars":5, "commits": 208},
   "JanStreffing/ocp-tool": {"pushed_at":"2026-09-08T13:47:19Z","stars":6, "commits": 253},
-  "esm-tools/esm_tools": {"pushed_at":"2026-09-16T08:20:45Z","stars":30, "commits": 704}
+  "esm-tools/esm_tools": {"pushed_at":"2026-09-17T08:17:25Z","stars":30, "commits": 704}
 }
